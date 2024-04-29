@@ -62,11 +62,11 @@ def update_graph(bfs_paths=None):
     graph_canvas.draw()
 
 
-def ancho():
+def execute_bfs():
     bfs_paths = list(nx.bfs_edges(network, source=node_input.get()))
     update_graph(bfs_paths)
 
-ancho_button = tk.Button(window, text="Búsqueda a lo ancho", command=ancho, bg='#374254', fg='#ececec')
+ancho_button = tk.Button(window, text="Búsqueda a lo ancho", command=execute_bfs, bg='#374254', fg='#ececec')
 ancho_button.pack()
 
 
